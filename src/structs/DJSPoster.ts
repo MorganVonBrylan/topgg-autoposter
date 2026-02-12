@@ -42,7 +42,7 @@ export class DJSPoster extends BasePoster implements BasePosterInterface {
   }
 
   public waitForReady(fn: () => void) {
-    this.client.once('ready', () => {
+    this.client.once('clientReady', () => {
       fn()
     })
   }
